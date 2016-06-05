@@ -56,7 +56,7 @@
 				<li>Osobní konzultace o Vašich požadavcích</li>
 				<li>Doména (.cz, .eu, .com) a hosting v ceně</li>
 				<li>Grafický návrh a logo v ceně</li>
-				<li><span class="price">27 000 Kč</span></li>
+				<li><span class="price">20 000 Kč</span></li>
 			</ul>
 
 			<div class="bottom">

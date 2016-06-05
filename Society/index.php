@@ -1,5 +1,6 @@
 <?php
 	session_start();
+
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/Society/scripts/language.php');
 	
 	if(!isset($_COOKIE['lang'])){

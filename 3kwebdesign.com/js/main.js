@@ -1,5 +1,15 @@
 $(document).ready(function()
 {
+	var links = [
+		"design/images/background.jpg",
+		"design/images/daperhair.png",
+		"design/images/klaga.png",
+		"design/images/stipala.png",
+		"design/images/society.png",
+		"design/images/universum.png",
+	];
+
+	var header = $('#header');
 	var home_page = $('#home-page');
 	var krul_page = $('#krul-page');
 	var kolcava_page = $('#kolcava-page');
@@ -8,6 +18,7 @@ $(document).ready(function()
 	var currentPage = home_page;
 
 	setPageSize();
+
 
 	if(screen.width > 768)
 	{
@@ -26,6 +37,9 @@ $(document).ready(function()
 		}
 	}
 
+	//Personal pages
+	/////////////////////////////////////////
+	
 	$('#krul-circle').on('click', function(){
 		movePageLeft(home_page, krul_page);
 	});
@@ -41,6 +55,33 @@ $(document).ready(function()
 	$('.back-button').on('click', function(){
 		movePageRight(home_page, currentPage);
 	});
+
+	//Header slider
+	/////////////////////////////////////////
+	
+	var mixedLinks = links.slice(1, links.length);
+	mixedLinks.mix();
+	mixedLinks.unshift(links[0]);
+
+	var link;
+	var linkIndex = 1;
+
+	window.setInterval(function()
+	{
+		if(linkIndex === mixedLinks.length)
+    	{
+    		linkIndex = 0;
+    	}
+
+		link = 'url("http://3kwebdesign.com/' + mixedLinks[linkIndex] + '")';
+		
+		header.animate({opacity: '0'}, 500, function()
+		{
+        	$(this).css({'background-image': link}).animate({opacity: '1'}, 500);
+    	});
+
+    	linkIndex++;
+	}, 15000);
 
 
 	$(window).on('resize', setPageSize);
@@ -61,7 +102,6 @@ $(document).ready(function()
 
 	function movePageLeft(page1, page2)
 	{
-		var i = 0;
 		page2.css('display', 'block');
 
 		function step()
@@ -90,7 +130,6 @@ $(document).ready(function()
 
 	function movePageRight(page1, page2)
 	{
-		var i = 0;
 		page1.css('display', 'block');
 
 		function step()
@@ -116,5 +155,22 @@ $(document).ready(function()
 
 		var timer = window.requestAnimationFrame(step);
 	}
-	
 });
+
+function getRandom(min, max)
+{
+	return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+Array.prototype.mix = function()
+{
+	var helpArray = this.slice();
+
+	for(var i = 0; i < this.length; i++)
+	{
+		var index = getRandom(0, helpArray.length - 1);
+		this[i] = helpArray[index];
+
+		helpArray.splice(index, 1);
+	}
+}

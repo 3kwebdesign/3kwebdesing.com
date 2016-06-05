@@ -125,7 +125,7 @@ if($output)
 
 			<tr>
 				<td colspan="2">
-					<input type="submit" name="kontakt" value="Odeslat"/>
+					<input type="submit" name="kontakt" value="Odeslat "/>
 				</td>
 			</tr>
 		</table>
