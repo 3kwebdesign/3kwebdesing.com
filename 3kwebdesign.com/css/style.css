@@ -255,14 +255,10 @@ article#mainPage .reference .item .info::before {
     opacity: 0;
 
     background: rgba(255, 255, 255, 0.7);
-    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.7) -50
-        %, transparent);
-    background: -o-linear-gradient(rgba(255, 255, 255, 0.7) -50
-        %, transparent);
-    background: -moz-linear-gradient(rgba(255, 255, 255, 0.7) -50
-        %, transparent);
-    background: linear-gradient(rgba(255, 255, 255, 0.7) -50
-        %, transparent);
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.7) -50%, transparent);
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.7) -50%, transparent);
+    background: -moz-linear-gradient(rgba(255, 255, 255, 0.7) -50%, transparent);
+    background: linear-gradient(rgba(255, 255, 255, 0.7) -50%, transparent);
 
     -webkit-transition: opacity 500ms linear;
     -moz-transition: opacity 500ms linear;
