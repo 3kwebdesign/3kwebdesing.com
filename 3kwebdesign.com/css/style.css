@@ -172,6 +172,16 @@ header#header .cover .quote h2{
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.6);
     display: table;
+
+    -webkit-transition: background 500ms linear;
+    -moz-transition: background 500ms linear;
+    -o-transition: background 500ms linear;
+    -ms-transition: background 500ms linear;
+    transition: background 500ms linear;
+}
+
+#bottomAll .circleBox .circle .cover:hover {
+    background: rgba(0, 0, 0, 0.3);
 }
 
 #bottomAll .circleBox .circle .cover h2{
@@ -221,6 +231,11 @@ article#mainPage .reference .item{
     position: relative;
 }
 
+article#mainPage .reference .item img{
+    width: 100%;
+    box-shadow: 0px 0px 23px 3px rgba(0,0,0,0.75);
+}
+
 article#mainPage .reference .item .info{
     position: absolute;
     top: 0px;
@@ -228,25 +243,40 @@ article#mainPage .reference .item .info{
     width: 100%;
     height: 90%;
 
-    background: rgba(0, 0, 0, 0.65);
     color: white;
-
-    -webkit-transition: all 500ms linear;
-    -moz-transition: all 500ms linear;
-    -o-transition: all 500ms linear;
-    -ms-transition: all 500ms linear;
-    transition: all 500ms linear;
+    background: rgba(0, 0, 0, 0.65);
 }
 
-article#mainPage .reference .item .info:hover {
+article#mainPage .reference .item .info::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
     background: rgba(255, 255, 255, 0.7);
-    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.7) -80%, rgba(0, 0, 0, 0.65));
-    background: -o-linear-gradient(rgba(255, 255, 255, 0.7) -80%, rgba(0, 0, 0, 0.65));
-    background: -moz-linear-gradient(rgba(255, 255, 255, 0.7) -80%, rgba(0, 0, 0, 0.65));
-    background: linear-gradient(rgba(255, 255, 255, 0.7) -80%, rgba(0, 0, 0, 0.65));
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.7) -50
+        %, transparent);
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.7) -50
+        %, transparent);
+    background: -moz-linear-gradient(rgba(255, 255, 255, 0.7) -50
+        %, transparent);
+    background: linear-gradient(rgba(255, 255, 255, 0.7) -50
+        %, transparent);
+
+    -webkit-transition: opacity 500ms linear;
+    -moz-transition: opacity 500ms linear;
+    -o-transition: opacity 500ms linear;
+    -ms-transition: opacity 500ms linear;
+    transition: opacity 500ms linear;
+}
+
+article#mainPage .reference .item .info:hover::before {
+   opacity: 1;
 }
 
 article#mainPage .reference .item .info .inner{
+    position: absolute;
     width: 100%;
     height: 100%;
 }
@@ -284,11 +314,6 @@ article#mainPage .reference .item .info .inner .table .bottom a{
 
 article#mainPage .reference .item .info .inner .table .bottom a:hover{
     font-size: 2em;
-}
-
-article#mainPage .reference .item img{
-    width: 100%;
-    box-shadow: 0px 0px 23px 3px rgba(0,0,0,0.75);
 }
 
 article#mainPage .categories{

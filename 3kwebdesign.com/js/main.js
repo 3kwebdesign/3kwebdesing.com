@@ -17,9 +17,6 @@ $(document).ready(function()
 
 	var currentPage = home_page;
 
-	setPageSize();
-
-
 	if(screen.width > 768)
 	{
 		var all = $('body *'), i;
@@ -84,24 +81,9 @@ $(document).ready(function()
 	}, 15000);
 
 
-	$(window).on('resize', setPageSize);
-
-	function setPageSize()
-	{
-		if(home_page.css('display') === 'block')
-		{
-			krul_page.css('left', home_page.width() + 'px');
-			kolcava_page.css('left', home_page.width() + 'px');
-			konecny_page.css('left', home_page.width() + 'px');
-		}
-		else
-		{
-			home_page.css('left', -home_page.width() + 'px');
-		}
-	}
-
 	function movePageLeft(page1, page2)
 	{
+		page2.css('left', page1.width() + 'px');
 		page2.css('display', 'block');
 
 		function step()
@@ -130,6 +112,7 @@ $(document).ready(function()
 
 	function movePageRight(page1, page2)
 	{
+		page1.css('left', -page2.width() + 'px');
 		page1.css('display', 'block');
 
 		function step()

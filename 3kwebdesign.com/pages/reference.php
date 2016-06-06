@@ -8,6 +8,7 @@
 
 	<div class="reference">
 		<div class="item">
+
 			<img src="design/images/stipala.png" />
 			
 			<div class="info">
