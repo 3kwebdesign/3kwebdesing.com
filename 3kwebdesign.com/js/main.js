@@ -7,6 +7,7 @@ $(document).ready(function()
 		"design/images/stipala.png",
 		"design/images/society.png",
 		"design/images/universum.png",
+		"design/images/design_1_screenshot.png"
 	];
 
 	var header = $('#header');
@@ -16,6 +17,9 @@ $(document).ready(function()
 	var konecny_page = $('#konecny-page');
 
 	var currentPage = home_page;
+
+	setPageSize();
+
 
 	if(screen.width > 768)
 	{
@@ -55,6 +59,10 @@ $(document).ready(function()
 
 	//Header slider
 	/////////////////////////////////////////
+		
+	header.animate({opacity: '0'}, 500, function(){
+        $(this).css({'background-image': 'url("http://3kwebdesign.com/' + links[getRandom(0, links.length - 1)] + '")' }).animate({opacity: '1'}, 500);
+    });
 	
 	var mixedLinks = links.slice(1, links.length);
 	mixedLinks.mix();
@@ -81,9 +89,24 @@ $(document).ready(function()
 	}, 15000);
 
 
+	$(window).on('resize', setPageSize);
+
+	function setPageSize()
+	{
+		if(home_page.css('display') === 'block')
+		{
+			krul_page.css('left', home_page.width() + 'px');
+			kolcava_page.css('left', home_page.width() + 'px');
+			konecny_page.css('left', home_page.width() + 'px');
+		}
+		else
+		{
+			home_page.css('left', -home_page.width() + 'px');
+		}
+	}
+
 	function movePageLeft(page1, page2)
 	{
-		page2.css('left', page1.width() + 'px');
 		page2.css('display', 'block');
 
 		function step()
@@ -112,7 +135,6 @@ $(document).ready(function()
 
 	function movePageRight(page1, page2)
 	{
-		page1.css('left', -page2.width() + 'px');
 		page1.css('display', 'block');
 
 		function step()
