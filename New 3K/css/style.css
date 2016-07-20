@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../css/opensans.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url('../css/opensans-light.ttf');
+}
+
+@font-face {
+    font-family: 'Meticu';
+    src: url('../css/meticu.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    font-smoothing:antialiased;
+    height: 100%;
+    font-size: 1.1em;
+    background: url('../design/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#wrapper{
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#wrapper #header{
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+}
+
+#wrapper #header .logo{
+
+}
+
+#wrapper #header .logo a{
+    text-decoration: none;
+}
+
+#wrapper #header .logo a img{
+    width: 70px;
+}
+
+#wrapper #header .menu{
+    text-align: right;
+    flex: 1;
+}
+
+#wrapper #header .menu a{
+    color: white;
+    text-decoration: none;
+    margin-right: 0.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid transparent;
+    transition: border-color 1s ease;
+    font-family: 'Open Sans Light';
+    letter-spacing: 1px;
+}
+
+#wrapper #header .menu a:hover{
+    border-color: white;
+}
+
+#wrapper #mainContent{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+#wrapper #mainContent .mainWrap{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#wrapper #mainContent .mainWrap .mainBorder{
+    width: 20%;
+    margin: 0 auto;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 255, 0), rgba(0, 0, 255, 0.75), rgba(0, 0, 255, 0));
+}
+
+#wrapper #mainContent .mainWrap .mainTitle{
+    color: white;
+    margin-top: 1em;
+    text-align: center;
+}
+
+#wrapper #mainContent .mainWrap .intro{
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    color: white;
+    font-family: 'Open Sans Light';
+}
+
+#wrapper #mainContent .mainWrap .contactButton{
+    margin: 0 auto;
+    margin-bottom: 2em;
+    padding: 1em;
+    text-decoration: none;
+    border: 1px solid white;
+    color: white;
+    transition: all 0.5s;
+}
+
+#wrapper #mainContent .mainWrap .contactButton:hover{
+    border-color: red;
+}
+
+#wrapper #foot{
+    padding: 0.5em;
+}
+
+#wrapper #foot .socialSites i{
+    color: white;
+    margin-right: 0.5em;
+}
+
+@media screen and (max-width: 768px) {
+    
+}
