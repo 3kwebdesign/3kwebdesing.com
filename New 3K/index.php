@@ -8,24 +8,29 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-	<title></title>
+	<title>3K Webdesign</title>
+	<link rel="shortcut icon" href="./design/icons/favicon.ico" />
 
-	<link rel="stylesheet" type="text/css" href="./css/style.css" />
-	<link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="./design/font-awesome/css/font-awesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="./css/sweetalert.css" />
-	<link rel="stylesheet" href="./css/nprogress.css" />
+	<link rel="stylesheet" type="text/css" href="./css/nprogress.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 
 	<script type="text/javascript" src="./js/jquery.js"></script>
-	<script src="./js/nprogress.js"></script>
+	<script type="text/javascript" src="./js/nprogress.js"></script>
 	<script type="text/javascript" src="./js/sweetalert.min.js"></script>
 	<script type="text/javascript" src="./js/main.js"></script>
 </head>
 <body>
-	<div id="wrapper">
+	<div id="page">
 		<header id="header">
 			<div class="logo">
 				<a href="/">
 					<img src="design/images/logo.png" />
+
+					<div class="title">
+						Webdesign
+					</div>
 				</a>
 			</div>
 
@@ -36,6 +41,8 @@
 				<a href="">Ceník</a>
 				<a href="">Kontakt</a>
 			</div>
+
+			<div id="headerBorder"></div>
 		</header>
 
 		<div id="mainContent">
@@ -53,9 +60,9 @@
 
 		<footer id="foot">
 			<div class="socialSites">
-				<i class="fa fa-envelope"></i>
-				<i class="fa fa-twitter"></i>
-				<i class="fa fa-facebook"></i>
+				<i class="fa fa-envelope ico-envelope"></i>
+				<i class="fa fa-twitter ico-twitter"></i>
+				<i class="fa fa-facebook ico-facebook"></i>
 			</div>
 		</footer>
 	</div>

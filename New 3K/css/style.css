@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Open Sans';
-    src: url('../css/opensans.ttf');
+    src: url('../design/fonts/opensans.ttf');
 }
 
 @font-face {
     font-family: 'Open Sans Light';
-    src: url('../css/opensans-light.ttf');
+    src: url('../design/fonts/opensans-light.ttf');
 }
 
 @font-face {
     font-family: 'Meticu';
-    src: url('../css/meticu.ttf');
+    src: url('../design/fonts/meticu.ttf');
 }
 
 * {
@@ -31,87 +31,117 @@ body{
     background-size: cover;
 }
 
-#wrapper{
-    display: flex;
+#page{
     width: 100%;
     min-height: 100%;
+    display: flex;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.7);
 }
 
-#wrapper #header{
+#page #header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding: 1em 1em;
+
+    /*change 1*/
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(30, 30, 30, 1);
+}
+
+#page #header .logo{
+   flex: 0;
+}
+
+#page #header .logo a{
+    text-decoration: none;
     display: flex;
     align-items: center;
-    padding: 0.5em;
 }
 
-#wrapper #header .logo{
-
+#page #header .logo a img{
+    width: 90px;
 }
 
-#wrapper #header .logo a{
-    text-decoration: none;
+#page #header .logo a .title {
+    color: #FFFFFF;
+    margin-left: 0.3em;
+    letter-spacing: 1px;
+    font-size: 36px;
+    font-family: 'Open Sans';
 }
 
-#wrapper #header .logo a img{
-    width: 70px;
-}
-
-#wrapper #header .menu{
+#page #header .menu{
     text-align: right;
     flex: 1;
 }
 
-#wrapper #header .menu a{
+#page #header .menu a{
     color: white;
     text-decoration: none;
     margin-right: 0.5em;
     padding-bottom: 0.3em;
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid transparent;
     transition: border-color 1s ease;
-    font-family: 'Open Sans Light';
+    font-family: 'Open Sans';
     letter-spacing: 1px;
 }
 
-#wrapper #header .menu a:hover{
+#page #header .menu a:hover{
     border-color: white;
 }
 
-#wrapper #mainContent{
+#page #header #headerBorder {
+    /*change 1*/
+
+    /*width: 100%;
+    margin: 0 auto;
+    margin-top: 0.7em;
+    height: 1px;
+
+    background: white;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) -50%, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 150%);*/
+}
+
+#page #mainContent{
     flex: 1;
     display: flex;
     align-items: center;
+
+    padding: 1em 0em;
 }
 
-#wrapper #mainContent .mainWrap{
+#page #mainContent .mainWrap{
     display: flex;
     flex-direction: column;
     width: 50%;
     margin: 0 auto;
 }
 
-#wrapper #mainContent .mainWrap .mainBorder{
-    width: 20%;
+#page #mainContent .mainWrap .mainBorder{
+    width: 30%;
     margin: 0 auto;
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 255, 0), rgba(0, 0, 255, 0.75), rgba(0, 0, 255, 0));
+    background-image: linear-gradient(to right, rgba(128, 128, 128, 0), rgba(128,128, 128, 0.75), rgba(128, 128, 128, 0));
 }
 
-#wrapper #mainContent .mainWrap .mainTitle{
+#page #mainContent .mainWrap .mainTitle{
     color: white;
     margin-top: 1em;
     text-align: center;
 }
 
-#wrapper #mainContent .mainWrap .intro{
+#page #mainContent .mainWrap .intro{
     padding-top: 0.5em;
     padding-bottom: 1em;
     color: white;
     font-family: 'Open Sans Light';
 }
 
-#wrapper #mainContent .mainWrap .contactButton{
+#page #mainContent .mainWrap .contactButton{
     margin: 0 auto;
     margin-bottom: 2em;
     padding: 1em;
@@ -119,20 +149,26 @@ body{
     border: 1px solid white;
     color: white;
     transition: all 0.5s;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
-#wrapper #mainContent .mainWrap .contactButton:hover{
+#page #mainContent .mainWrap .contactButton:hover{
     border-color: red;
 }
 
-#wrapper #foot{
-    padding: 0.5em;
+#page #foot{
+    padding: 0.5em 1em;
 }
 
-#wrapper #foot .socialSites i{
+#page #foot .socialSites i{
     color: white;
     margin-right: 0.5em;
+    font-size: 1.2em;
 }
+
+#page #foot .socialSites .ico-envelope:hover {color: rgb(100, 255, 0);}
+#page #foot .socialSites .ico-twitter:hover  {color: rgb(0, 200, 255);}
+#page #foot .socialSites .ico-facebook:hover {color: rgb(0, 100, 255);}
 
 @media screen and (max-width: 768px) {
     
