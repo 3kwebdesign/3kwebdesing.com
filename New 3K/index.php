@@ -1,5 +1,30 @@
 <?php
+	require('system/functions.php');
 
+	$nav_pages = [
+		"home" => "",
+		"team" => "",
+		"reference" => "",
+		"cenik" => "",
+		"kontakt" => ""
+	];
+
+	$get_page = isset($_GET['page']) ? base64_decode($_GET['page']) : 'home';
+
+	$pageExist = false;
+	foreach (array_keys($nav_pages) as $key => $value)
+	{
+		if($value === $get_page)
+		{
+			$pageExist = true;
+			break;
+		}
+	}
+
+	if($pageExist)
+		$nav_pages[$get_page] = "active";
+	else
+		$get_page = '404';
 ?>
 
 <!DOCTYPE html>
@@ -35,11 +60,25 @@
 			</div>
 
 			<div class="menu">
-				<a href="">Domů</a>
-				<a href="">Tým</a>
-				<a href="">Blog</a>
-				<a href="">Ceník</a>
-				<a href="">Kontakt</a>
+				<a class="<?php echo($nav_pages['home']); ?>" 
+					href="?page=<?php echo base64_encode('home'); ?>"> Domů
+		        </a>
+				<a class="<?php echo($nav_pages['team']); ?>"
+					href="?page=<?php echo base64_encode('team'); ?>">
+					Tým
+				</a>
+				<a class="<?php echo($nav_pages['reference']); ?>"
+					href="?page=<?php echo base64_encode('reference'); ?>">
+					Reference
+				</a>
+				<a class="<?php echo($nav_pages['cenik']); ?>"
+					href="?page=<?php echo base64_encode('cenik'); ?>">
+					Ceník
+				</a>
+				<a class="<?php echo($nav_pages['kontakt']); ?>"
+					href="?page=<?php echo base64_encode('kontakt'); ?>">
+					Kontakt
+				</a>
 			</div>
 
 			<div id="headerBorder"></div>
@@ -47,14 +86,18 @@
 
 		<div id="mainContent">
 			<div class="mainWrap">
-				<hr class="mainBorder" />
+
+				<?php
+					loadPage($get_page);
+				?>
+				<!--<hr class="mainBorder" />
 				<h1 class="mainTitle">Lorem impsum dolor sit amet</h1>
 				<p class="intro">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus dui diam, et faucibus tellus accumsan a. Aenean at odio lectus. Integer tortor dui, iaculis eget efficitur sed, egestas nec odio.
 				</p>
 
 				<a href="" class="contactButton">Kontaktujte nás</a>
-				<hr class="mainBorder" />
+				<hr class="mainBorder" />-->
 			</div>
 		</div>
 

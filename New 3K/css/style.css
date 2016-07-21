@@ -39,6 +39,9 @@ body{
     background: rgba(0, 0, 0, 0.7);
 }
 
+/*********************************************/
+/*          HEADER                          */
+
 #page #header{
     display: flex;
     flex-wrap: wrap;
@@ -80,18 +83,22 @@ body{
 
 #page #header .menu a{
     color: white;
-    text-decoration: none;
     margin-right: 0.5em;
-    padding-bottom: 0.3em;
+    font-family: 'Open Sans';
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.3em;
     border-bottom: 2px solid transparent;
     transition: border-color 1s ease;
-    font-family: 'Open Sans';
-    letter-spacing: 1px;
 }
 
-#page #header .menu a:hover{
-    border-color: white;
+#page #header .menu a:last-child {
+    margin-right: 0px;
 }
+
+#page #header .menu a:hover  { border-color: white; }
+#page #header .menu a.active { border-color: white; }
 
 #page #header #headerBorder {
     /*change 1*/
@@ -105,6 +112,9 @@ body{
     background: linear-gradient(to right, rgba(255, 255, 255, 1) -50%, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 150%);*/
 }
 
+/*********************************************/
+/*          CONTENT                         */
+
 #page #mainContent{
     flex: 1;
     display: flex;
@@ -116,8 +126,10 @@ body{
 #page #mainContent .mainWrap{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
+
+    color: white
 }
 
 #page #mainContent .mainWrap .mainBorder{
@@ -134,7 +146,7 @@ body{
     text-align: center;
 }
 
-#page #mainContent .mainWrap .intro{
+#page #mainContent .mainWrap .intro, p{
     padding-top: 0.5em;
     padding-bottom: 1em;
     color: white;
@@ -149,12 +161,60 @@ body{
     border: 1px solid white;
     color: white;
     transition: all 0.5s;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #page #mainContent .mainWrap .contactButton:hover{
     border-color: red;
 }
+
+#page #mainContent .mainWrap #kontakt-form {
+  text-align: center;
+}
+
+#page #mainContent .mainWrap #kontakt-form .col-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#page #mainContent .mainWrap #kontakt-form .col-flex .col{
+   flex: 1;
+   margin-right: 1em;
+}
+#page #mainContent .mainWrap #kontakt-form .col-flex .col:last-child{
+   margin-right: 0px;
+}
+
+#page #mainContent .mainWrap #kontakt-form .col-flex .col .row{
+    display: flex;
+    margin-bottom: 1.5em;
+}
+
+#page #mainContent .mainWrap #kontakt-form .col .row label{
+    padding: 0.5em;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    flex: 1;
+}
+
+#page #mainContent .mainWrap #kontakt-form input, select, textarea{
+    font-size: 16px;
+    padding: 0.5em 0.5em;
+    flex: 3;
+}
+
+#page #mainContent .mainWrap #kontakt-form textarea {
+    height: 5.6em;
+    flex: 1;
+}
+
+#page #mainContent .mainWrap #kontakt-form input[type="submit"] { padding: 1em; }
+#page #mainContent .mainWrap #kontakt-form input[type="submit"]:hover { cursor: pointer; border-color: green; }
+
+
+/*********************************************/
+/*          FOOTER                          */
 
 #page #foot{
     padding: 0.5em 1em;
@@ -163,7 +223,7 @@ body{
 #page #foot .socialSites i{
     color: white;
     margin-right: 0.5em;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 #page #foot .socialSites .ico-envelope:hover {color: rgb(100, 255, 0);}
