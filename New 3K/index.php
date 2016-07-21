@@ -33,12 +33,13 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-	<title>3K Webdesign</title>
+	<title>Webdesign</title>
 	<link rel="shortcut icon" href="./design/icons/favicon.ico" />
 
 	<link rel="stylesheet" type="text/css" href="./design/font-awesome/css/font-awesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="./css/sweetalert.css" />
 	<link rel="stylesheet" type="text/css" href="./css/nprogress.css" />
+
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 
 	<script type="text/javascript" src="./js/jquery.js"></script>
@@ -90,14 +91,7 @@
 				<?php
 					loadPage($get_page);
 				?>
-				<!--<hr class="mainBorder" />
-				<h1 class="mainTitle">Lorem impsum dolor sit amet</h1>
-				<p class="intro">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus dui diam, et faucibus tellus accumsan a. Aenean at odio lectus. Integer tortor dui, iaculis eget efficitur sed, egestas nec odio.
-				</p>
 
-				<a href="" class="contactButton">Kontaktujte nás</a>
-				<hr class="mainBorder" />-->
 			</div>
 		</div>
 

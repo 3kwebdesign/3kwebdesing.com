@@ -62,12 +62,26 @@ if($output)
 }
 ?>
 <hr class="mainBorder" />
-<h2 class="mainTitle">Kontaktujte nás!</h2>
+<h1 class="mainTitle">Kontaktujte nás!</h1>
 <p class="intro">
-bla bla bla náš email bla bla bla
+bla bla bla náš bla bla bla
 </p>
 
-<p>bla bla naše číslo</p>
+<div id="contact-icons">
+	<div class="icon-wrapper">
+		<div class="icon email">
+			<div class="fa fa-envelope"></div>
+		</div>
+		<h2>my@3kwebdesign.com</h2>
+	</div>
+
+	<div class="icon-wrapper">
+		<div class="icon phone">
+			<div class="fa fa-phone"></div>
+		</div>
+		<h2>+420 001 999 911</h2>
+	</div>
+</div>
 
 <form id="kontakt-form" method="POST">
 	<div class="col-flex">
@@ -111,7 +125,7 @@ bla bla bla náš email bla bla bla
 			</select>
 		</div>
 
-		<div class="row">
+		<div class="row msg">
 			<textarea name="message" placeholder="Vaše zpráva"><?= $message ?></textarea>
 		</div>
 	</div>
