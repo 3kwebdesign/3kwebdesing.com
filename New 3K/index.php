@@ -9,7 +9,7 @@
 		"kontakt" => ""
 	];
 
-	$get_page = isset($_GET['page']) ? base64_decode($_GET['page']) : 'home';
+	$get_page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
 	$pageExist = false;
 	foreach (array_keys($nav_pages) as $key => $value)
@@ -62,22 +62,22 @@
 
 			<div class="menu">
 				<a class="<?php echo($nav_pages['home']); ?>" 
-					href="?page=<?php echo base64_encode('home'); ?>"> Domů
+					href="?page=<?php echo('home'); ?>"> Domů
 		        </a>
 				<a class="<?php echo($nav_pages['team']); ?>"
-					href="?page=<?php echo base64_encode('team'); ?>">
+					href="?page=<?php echo('team'); ?>">
 					Tým
 				</a>
 				<a class="<?php echo($nav_pages['reference']); ?>"
-					href="?page=<?php echo base64_encode('reference'); ?>">
+					href="?page=<?php echo('reference'); ?>">
 					Reference
 				</a>
 				<a class="<?php echo($nav_pages['cenik']); ?>"
-					href="?page=<?php echo base64_encode('cenik'); ?>">
+					href="?page=<?php echo('cenik'); ?>">
 					Ceník
 				</a>
 				<a class="<?php echo($nav_pages['kontakt']); ?>"
-					href="?page=<?php echo base64_encode('kontakt'); ?>">
+					href="?page=<?php echo('kontakt'); ?>">
 					Kontakt
 				</a>
 			</div>

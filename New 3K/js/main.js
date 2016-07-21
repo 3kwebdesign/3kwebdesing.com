@@ -1,4 +1,7 @@
-$(document).ready(function(){
+$(document).ready(function()
+{
+	normalisePage();
+	$(window).on('resize', normalisePage);
 
 	/*var all = $('body *'), i;
 	all.css({'opacity': '0'});
@@ -14,3 +17,10 @@ $(document).ready(function(){
 		})(i);
 	}*/
 });
+
+function normalisePage()
+{
+	var item = $('.mainWrap');
+	item.width('80%');
+	item.width(Math.floor(item.width()));
+}

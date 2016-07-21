@@ -63,8 +63,8 @@ if($output)
 ?>
 <hr class="mainBorder" />
 <h1 class="mainTitle">Kontaktujte nás!</h1>
-<p class="intro">
-bla bla bla náš bla bla bla
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus dui diam, et faucibus tellus accumsan a. Aenean at odio lectus. Integer tortor dui, iaculis eget efficitur sed, egestas nec odio.
 </p>
 
 <div id="contact-icons">

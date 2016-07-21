@@ -18,4 +18,15 @@ function sweetAlert($title, $text, $option)
 {
 	echo('<script type="text/javascript"> swal("'.$title.'", "'.$text.'", "'.$option.'"); </script>');
 }
-?>
+
+function loadRefItem($src, $title, $href)
+{
+	$item = '<div class="item">';
+	$item .= '<img src="./design/images/'.$src.'">';
+	$item .= '<div class="info">';
+	$item .= '<a href="'.$href.'"> <h3>'.$title.'</h3> </a>';
+	$item .= '</div>';
+	$item .= '</div>';
+
+	echo($item);
+}

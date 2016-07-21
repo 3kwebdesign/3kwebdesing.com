@@ -26,7 +26,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus dui diam, e
 			</ul>
 
 			<div class="bottom">
-				<a href="?page=<?=base64_encode('kontakt')?>&service=1">Objednat!</a>
+				<a href="?page=kontakt&service=1">Objednat!</a>
 			</div>
 		</div>
 
@@ -45,7 +45,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus dui diam, e
 				<li><span class="price">6 400 Kč</span></li>
 			</ul>
 			<div class="bottom">
-				<a href="?page=<?=base64_encode('kontakt')?>&service=2">Objednat!</a>
+				<a href="?page=kontakt&service=2">Objednat!</a>
 			</div>
 		</div>
 
@@ -65,7 +65,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus dui diam, e
 			</ul>
 
 			<div class="bottom">
-				<a href="?page=<?=base64_encode('kontakt')?>&service=3">Objednat!</a>
+				<a href="?page=kontakt&service=3">Objednat!</a>
 			</div>
 
 <a href="" class="contactButton">Kontaktujte nás</a>
