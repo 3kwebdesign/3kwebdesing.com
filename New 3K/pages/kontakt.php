@@ -20,10 +20,10 @@ if(isset($_POST['kontakt']))
 	$message = isset($_POST['message'])  ? htmlspecialchars($_POST['message']) : '';
 	$selected = isset($_POST['service']) ? (int)$_POST['service'] : 0;
 
-	if($name && $email && $selected && $message)
+	if($name && $email && $message)
 	{
 		$text = $name + $telefon;
-		$text += $message;
+		$text .= $message;
 
 		$send = sendMail("my@3kwebdesign.com", $name.' - '.$services[$selected],
 		 				 $email, $text);

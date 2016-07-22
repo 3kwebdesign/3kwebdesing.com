@@ -5,7 +5,7 @@
 		"home" => "",
 		"team" => "",
 		"reference" => "",
-		"cenik" => "",
+		"services" => "",
 		"kontakt" => ""
 	];
 
@@ -61,25 +61,36 @@
 			</div>
 
 			<div class="menu">
-				<a class="<?php echo($nav_pages['home']); ?>" 
-					href="?page=<?php echo('home'); ?>"> Domů
-		        </a>
-				<a class="<?php echo($nav_pages['team']); ?>"
-					href="?page=<?php echo('team'); ?>">
-					Tým
-				</a>
-				<a class="<?php echo($nav_pages['reference']); ?>"
-					href="?page=<?php echo('reference'); ?>">
-					Reference
-				</a>
-				<a class="<?php echo($nav_pages['cenik']); ?>"
-					href="?page=<?php echo('cenik'); ?>">
-					Ceník
-				</a>
-				<a class="<?php echo($nav_pages['kontakt']); ?>"
-					href="?page=<?php echo('kontakt'); ?>">
-					Kontakt
-				</a>
+
+				<div class="primary-nav">
+					<a class="<?php echo($nav_pages['home']); ?>" 
+						href="?page=<?php echo('home'); ?>"> Domů
+			        </a>
+					<a class="<?php echo($nav_pages['team']); ?>"
+						href="?page=<?php echo('team'); ?>">
+						Tým
+					</a>
+					<a class="<?php echo($nav_pages['reference']); ?>"
+						href="?page=<?php echo('reference'); ?>">
+						Reference
+					</a>
+					<a class="<?php echo($nav_pages['services']); ?>"
+						href="?page=<?php echo('services'); ?>">
+						Služby
+					</a>
+					<a class="<?php echo($nav_pages['kontakt']); ?>"
+						href="?page=<?php echo('kontakt'); ?>">
+						Kontakt
+					</a>
+				</div>
+
+				<div class="slick-nav">
+					<div id="slick-open-btn" class="slick-btn" href="">
+						<span class="slick-txt">MENU</span>
+						<span class="slick-ico fa fa-bars"></span>
+					</div>
+				</div>
+				
 			</div>
 
 			<div id="headerBorder"></div>
