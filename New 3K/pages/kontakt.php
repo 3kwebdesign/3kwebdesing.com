@@ -53,7 +53,7 @@ if($output)
 {
 	if($send)
 	{
-		sweetAlert($output, 'brzy vám odpovíme', 'success');
+		sweetAlert($output, 'Brzy vám odpovíme', 'success');
 	}
 	else
 	{

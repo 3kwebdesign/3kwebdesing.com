@@ -48,11 +48,24 @@ body{
     flex-wrap: wrap;
     align-items: center;
     padding: 0.5em 1em;
-    background: rgba(0, 0, 0, 0.3);
-    /*position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
     top: 0px;
     left: 0px;
-    right: 0px;*/
+    right: 0px;
+    z-index: 100;
+    transition: background-color 0.4s ease-in; 
+    -ms-transition: background-color 0.4s ease-in;
+    -moz-transition: background-color 0.4s ease-in;
+    -webkit-transition: background-color 0.4s ease-in;
+}
+
+#page.slick-menu-on  #header{
+    background-color: transparent;
+    transition: background-color 0.4s ease-out; 
+    -ms-transition: background-color 0.4s ease-out;
+    -moz-transition: background-color 0.4s ease-out;
+    -webkit-transition: background-color 0.4s ease-out;
 }
 
 #page #header .logo{
@@ -133,6 +146,59 @@ body{
     font-size: 1.4em;
 }
 
+#page #slick-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 90;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease-in, visibility 0.4s;
+    -ms-transition: opacity 0.4s ease-in, visibility 0.4s;
+    -moz-transition: opacity 0.4s ease-in, visibility 0.4s;
+    -webkit-transition: opacity 0.4s ease-in, visibility 0.4s;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+#page.slick-menu-on #slick-menu {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.4s ease-out, visibility 0.4s ;
+    -ms-transition: opacity 0.4s ease-out, visibility 0.4s ;
+    -moz-transition: opacity 0.4s ease-out, visibility 0.4s ;
+    -webkit-transition: opacity 0.4s ease-out, visibility 0.4s;
+}
+
+#page #slick-menu .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page #slick-menu .menu a {
+    color: white;
+    padding: 0.3em;
+    margin-bottom: 0.5em;
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid transparent;
+    transition: border-color 1s ease;
+}
+
+#page #slick-menu .menu a:last-child {
+    margin-bottom: 0px;
+}
+
+#page #slick-menu .menu a:hover  { border-color: white; }
+
 /*********************************************/
 /*          CONTENT                         */
 
@@ -142,6 +208,7 @@ body{
     align-items: center;
     justify-content: center;
     padding: 1em 0em;
+    margin-top: 5.55em;
 }
 
 #page #mainContent .mainWrap{
@@ -312,6 +379,14 @@ body{
 
 #page #foot{
     padding: 0.5em 1em;
+}
+
+#page.slick-menu-on #foot {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 #page #foot .socialSites i{

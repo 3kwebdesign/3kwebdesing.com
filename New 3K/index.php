@@ -48,7 +48,7 @@
 	<script type="text/javascript" src="./js/main.js"></script>
 </head>
 <body>
-	<div id="page">
+	<div id="page" class="slick-menu-off">
 		<header id="header">
 			<div class="logo">
 				<a href="/">
@@ -85,7 +85,7 @@
 				</div>
 
 				<div class="slick-nav">
-					<div id="slick-open-btn" class="slick-btn" href="">
+					<div id="slick-menu-btn" class="slick-btn" href="">
 						<span class="slick-txt">MENU</span>
 						<span class="slick-ico fa fa-bars"></span>
 					</div>
@@ -95,6 +95,30 @@
 
 			<div id="headerBorder"></div>
 		</header>
+
+		<div id="slick-menu">
+			<div class="menu">
+				<a class="<?php echo($nav_pages['home']); ?>" 
+						href="?page=<?php echo('home'); ?>"> Domů
+			        </a>
+					<a class="<?php echo($nav_pages['team']); ?>"
+						href="?page=<?php echo('team'); ?>">
+						Tým
+					</a>
+					<a class="<?php echo($nav_pages['reference']); ?>"
+						href="?page=<?php echo('reference'); ?>">
+						Reference
+					</a>
+					<a class="<?php echo($nav_pages['services']); ?>"
+						href="?page=<?php echo('services'); ?>">
+						Služby
+					</a>
+					<a class="<?php echo($nav_pages['kontakt']); ?>"
+						href="?page=<?php echo('kontakt'); ?>">
+						Kontakt
+					</a>
+			</div>
+		</div>
 
 		<div id="mainContent">
 			<div class="mainWrap">
