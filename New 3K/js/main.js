@@ -1,6 +1,7 @@
 $(document).ready(function()
 {
 	var page = $('#page');
+	var header = $('#header');
 	var slick_menu_btn = $('#slick-menu-btn');
 
 	normalisePage();
@@ -12,12 +13,21 @@ $(document).ready(function()
 
 	$(window).on('resize', function()
 	{
-		if($(this).width() > 768 && page.attr('class') === 'slick-menu-on')
+		if($(this).width() > 768 && page.hasClass('slick-menu-on'))
 		{
 			page.toggleClass('slick-menu-off slick-menu-on');
 		}
 
 		normalisePage();
+	});
+
+	document.addEventListener('scroll', function(e)
+	{
+		if((window.pageYOffset > header.height() && page.hasClass('over-header-off')) ||
+		   (window.pageYOffset < header.height() && page.hasClass('over-header-on' )))
+		{
+			page.toggleClass('over-header-off over-header-on');
+		}
 	});
 
 	/*var all = $('body *'), i;

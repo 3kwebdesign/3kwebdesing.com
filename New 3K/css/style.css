@@ -54,19 +54,21 @@ body{
     left: 0px;
     right: 0px;
     z-index: 100;
-    transition: background-color 0.4s ease-in; 
-    -ms-transition: background-color 0.4s ease-in;
-    -moz-transition: background-color 0.4s ease-in;
-    -webkit-transition: background-color 0.4s ease-in;
+    transition: all 0.5s ease-in; 
+    -ms-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
 }
 
-#page.slick-menu-on  #header{
+#page.slick-menu-on.over-header-off #header{
     background-color: transparent;
-    transition: background-color 0.4s ease-out; 
-    -ms-transition: background-color 0.4s ease-out;
-    -moz-transition: background-color 0.4s ease-out;
-    -webkit-transition: background-color 0.4s ease-out;
+    transition: background-color 0.5s ease-out; 
+    -ms-transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -webkit-transition: background-color 0.5s ease-out;
 }
+
+#page.over-header-on #header { background: rgba(255, 255, 255, 1); }
 
 #page #header .logo{
    flex: 0;
@@ -82,13 +84,17 @@ body{
     width: 80px;
 }
 
+#page.over-header-on #header .logo a img { width: 50px; }
+
 #page #header .logo a .title {
-    color: #FFFFFF;
+    color: white;
     margin-left: 0.3em;
     letter-spacing: 1px;
     font-size: 32px;
     font-family: 'Open Sans';
 }
+
+#page.over-header-on #header .logo a .title { color: black; }
 
 #page #header .menu{ flex: 1 0 auto;}
 
@@ -120,6 +126,9 @@ body{
 
 #page #header .menu .primary-nav a:hover  { border-color: white; }
 #page #header .menu .primary-nav a.active { border-color: white; }
+#page.over-header-on #header .menu .primary-nav a { color: black; }
+#page.over-header-on #header .menu .primary-nav a:hover { border-color: black; }
+#page.over-header-on #header .menu .primary-nav a.active { border-color: black; }
 
 #page #header .menu .slick-nav .slick-btn {
     font-family: 'Open Sans';
@@ -134,6 +143,16 @@ body{
 
 #page #header .menu .slick-nav .slick-btn:hover {
   border-color: red;
+}
+
+#page.over-header-on #header .menu .slick-nav .slick-btn {
+    color: black; 
+    border-color: black;
+}
+
+#page.over-header-on #header .menu .slick-nav .slick-btn:hover {
+    color: white;
+    background-color: black;
 }
 
 #page #header .menu .slick-nav .slick-btn .slick-txt {
@@ -158,26 +177,27 @@ body{
     height: 100%;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.4s ease-in, visibility 0.4s;
-    -ms-transition: opacity 0.4s ease-in, visibility 0.4s;
-    -moz-transition: opacity 0.4s ease-in, visibility 0.4s;
-    -webkit-transition: opacity 0.4s ease-in, visibility 0.4s;
+    transition: opacity 0.5s ease-in, visibility 0.5s;
+    -ms-transition: opacity 0.5s ease-in, visibility 0.5s;
+    -moz-transition: opacity 0.5s ease-in, visibility 0.5s;
+    -webkit-transition: opacity 0.5s ease-in, visibility 0.5s;
     background-color: rgba(0, 0, 0, 0.95);
 }
 
 #page.slick-menu-on #slick-menu {
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.4s ease-out, visibility 0.4s ;
-    -ms-transition: opacity 0.4s ease-out, visibility 0.4s ;
-    -moz-transition: opacity 0.4s ease-out, visibility 0.4s ;
-    -webkit-transition: opacity 0.4s ease-out, visibility 0.4s;
+    transition: opacity 0.5s ease-out, visibility 0.5s;
+    -ms-transition: opacity 0.5s ease-out, visibility 0.5s;
+    -moz-transition: opacity 0.5s ease-out, visibility 0.5s;
+    -webkit-transition: opacity 0.5s ease-out, visibility 0.5s;
 }
 
 #page #slick-menu .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 #page #slick-menu .menu a {
@@ -198,6 +218,27 @@ body{
 }
 
 #page #slick-menu .menu a:hover  { border-color: white; }
+#page #slick-menu .menu a.active { border-color: white; }
+
+#page #slick-menu .slick-foot{
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5em 1em;
+}
+
+#page #slick-menu .slick-foot .socialSites a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    margin-right: 0.5em;
+}
+
+#page #slick-menu .slick-foot .socialSites .ico-envelope:hover {color: rgb(100, 255, 0);}
+#page #slick-menu .slick-foot .socialSites .ico-twitter:hover  {color: rgb(0, 200, 255);}
+#page #slick-menu .slick-foot .socialSites .ico-facebook:hover {color: rgb(0, 100, 255);}
 
 /*********************************************/
 /*          CONTENT                         */
@@ -381,18 +422,15 @@ body{
     padding: 0.5em 1em;
 }
 
-#page.slick-menu-on #foot {
-    position: fixed;
-    z-index: 100;
-    bottom: 0;
-    left: 0;
-    right: 0;
+#page.slick-menu-on #foot .socialSites {
+    visibility: hidden;
 }
 
-#page #foot .socialSites i{
+#page #foot .socialSites a{
     color: white;
-    margin-right: 0.5em;
+    text-decoration: none;
     font-size: 1.3em;
+    margin-right: 0.5em;
 }
 
 #page #foot .socialSites .ico-envelope:hover {color: rgb(100, 255, 0);}
@@ -408,7 +446,7 @@ body{
     }
 
     #page #mainContent .reference .item .info a h3 {
-        font-size: 0.6em;
+        font-size: 0.7em;
     }
 }
 

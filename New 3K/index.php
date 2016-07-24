@@ -48,7 +48,7 @@
 	<script type="text/javascript" src="./js/main.js"></script>
 </head>
 <body>
-	<div id="page" class="slick-menu-off">
+	<div id="page" class="slick-menu-off over-header-off">
 		<header id="header">
 			<div class="logo">
 				<a href="/">
@@ -118,6 +118,16 @@
 						Kontakt
 					</a>
 			</div>
+
+			<div class="slick-foot">
+				<div class="socialSites">
+					<a class="fa fa-envelope ico-envelope" href="mailto:my@3kwebdesign.com"
+				 	target="_blank"></a>
+					<a class="fa fa-twitter ico-twitter" href="" target="_blank"></a>
+					<a class="fa fa-facebook ico-facebook" href="https://www.facebook.com/3kwebdesignczech/"
+				 	target="_blank"></a>
+				</div>
+			</div>
 		</div>
 
 		<div id="mainContent">
@@ -132,9 +142,11 @@
 
 		<footer id="foot">
 			<div class="socialSites">
-				<i class="fa fa-envelope ico-envelope"></i>
-				<i class="fa fa-twitter ico-twitter"></i>
-				<i class="fa fa-facebook ico-facebook"></i>
+				<a class="fa fa-envelope ico-envelope" href="mailto:my@3kwebdesign.com"
+				 target="_blank"></a>
+				<a class="fa fa-twitter ico-twitter" href="" target="_blank"></a>
+				<a class="fa fa-facebook ico-facebook" href="www.facebook.com/3kwebdesignczech"
+				 target="_blank"></a>
 			</div>
 		</footer>
 	</div>
