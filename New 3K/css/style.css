@@ -511,3 +511,11 @@ body{
         font-size: 1.1em;
     }
 }
+
+@media screen and (max-height: 420px) {
+
+    #page #slick-menu .menu {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
