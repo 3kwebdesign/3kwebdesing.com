@@ -1,8 +1,13 @@
+var cfg = {
+	transitionEnd: 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend'
+};
+
 $(document).ready(function()
 {
 	var page = $('#page');
 	var header = $('#header');
 	var slick_menu_btn = $('#slick-menu-btn');
+	var logo = $('#page #header .logo a img');
 
 	normalisePage();
 

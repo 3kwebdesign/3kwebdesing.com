@@ -9,9 +9,10 @@
 		"kontakt" => ""
 	];
 
+	$pageExist = false;
+
 	$get_page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-	$pageExist = false;
 	foreach (array_keys($nav_pages) as $key => $value)
 	{
 		if($value === $get_page)
@@ -20,6 +21,7 @@
 			break;
 		}
 	}
+
 
 	if($pageExist)
 		$nav_pages[$get_page] = "active";
@@ -87,7 +89,10 @@
 				<div class="slick-nav">
 					<div id="slick-menu-btn" class="slick-btn" href="">
 						<span class="slick-txt">MENU</span>
-						<span class="slick-ico fa fa-bars"></span>
+						<div class="slick-ico">
+							<span class="slick-off fa fa-bars "></span>
+							<span class="slick-on fa  fa-times "></span>
+						</div>
 					</div>
 				</div>
 				
