@@ -8,16 +8,20 @@ $(document).ready(function()
 	var header = $('#header');
 	var slick_menu_btn = $('#slick-menu-btn');
 	var logo = $('#page #header .logo a img');
+	var slick_menu_list = $('#page #slick-menu .menu');
 
 	normalisePage();
 
 	slick_menu_btn.on('click', function()
 	{
+		//open slick-menu and set margin top
 		page.toggleClass('slick-menu-off slick-menu-on');
+		slick_menu_list.css({'margin-top': header.outerHeight() + 'px'});
 	});
 
 	$(window).on('resize', function()
 	{
+		//if slick menu is on and the page is resized - larger -> toggle
 		if($(this).width() > 768 && page.hasClass('slick-menu-on'))
 		{
 			page.toggleClass('slick-menu-off slick-menu-on');
@@ -31,7 +35,17 @@ $(document).ready(function()
 		if((window.pageYOffset > header.height() && page.hasClass('over-header-off')) ||
 		   (window.pageYOffset < header.height() && page.hasClass('over-header-on' )))
 		{
+			//toggle class - transition height
 			page.toggleClass('over-header-off over-header-on');
+		}
+	});
+
+	//change margin-top of slick menu list after the transition
+	logo.on(cfg.transitionEnd, function()
+	{
+		if(page.hasClass('slick-menu-on'))
+		{
+			slick_menu_list.css({'margin-top': header.outerHeight() + 'px'});
 		}
 	});
 
