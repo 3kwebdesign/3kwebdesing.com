@@ -90,8 +90,8 @@
 					<div id="slick-menu-btn" class="slick-btn" href="">
 						<span class="slick-txt">MENU</span>
 						<div class="slick-ico">
-							<span class="slick-off fa fa-bars "></span>
-							<span class="slick-on fa  fa-times "></span>
+							<span class="slick-off fa fa-bars"></span>
+							<span class="slick-on fa fa-times"></span>
 						</div>
 					</div>
 				</div>
@@ -139,7 +139,7 @@
 			<div class="wrapper">
 				<div class="content">
 					<h1 class="main_title">A už si to piš, bobku!</h1>
-					<h2>Ani farář nekáže dvakrát</h2>
+					<h2 class="sub_title">Ani farář nekáže dvakrát</h2>
 				</div>
 			</div>
 		</div>
