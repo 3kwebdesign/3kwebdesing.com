@@ -135,6 +135,15 @@
 			</div>
 		</div>
 
+		<div id="sub_header">
+			<div class="wrapper">
+				<div class="content">
+					<h1 class="main_title">A už si to piš, bobku!</h1>
+					<h2>Ani farář nekáže dvakrát</h2>
+				</div>
+			</div>
+		</div>
+
 		<div id="mainContent">
 			<div class="mainWrap">
 

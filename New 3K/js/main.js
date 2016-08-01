@@ -9,6 +9,7 @@ $(document).ready(function()
 	var slick_menu_btn = $('#slick-menu-btn');
 	var logo = $('#page #header .logo a img');
 	var slick_menu_list = $('#page #slick-menu .menu');
+	var sub_header_content = $('#page #sub_header .wrapper .content');
 
 	normalisePage();
 
@@ -48,6 +49,8 @@ $(document).ready(function()
 			slick_menu_list.css({'margin-top': header.outerHeight() + 'px'});
 		}
 	});
+
+	sub_header_content.css({'margin-top': header.outerHeight() + 'px'});
 
 	/*var all = $('body *'), i;
 	all.css({'opacity': '0'});

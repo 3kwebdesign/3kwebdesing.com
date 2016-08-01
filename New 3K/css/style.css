@@ -27,8 +27,6 @@ body{
     font-smoothing:antialiased;
     height: 100%;
     font-size: 1.1em;
-    background: url('../design/images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
 }
 
 #page{
@@ -37,7 +35,6 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.7);
 }
 
 /*********************************************/
@@ -47,7 +44,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 0.5em 1em;
+    padding: 0.5em 0.5em;
     background: rgba(0, 0, 0, 0.6);
     position: fixed;
     top: 0px;
@@ -64,7 +61,7 @@ body{
     background-color: transparent;
 }
 
-#page.over-header-on #header { background: rgba(255, 255, 255, 1); }
+#page.over-header-on #header { background: rgba(0, 0, 0, 1); }
 
 #page #header .logo{
    flex: 0;
@@ -102,8 +99,6 @@ body{
     -webkit-transition: inherit;
 }
 
-#page.over-header-on #header .logo a .title { color: black; }
-
 #page #header .menu{ flex: 1 0 auto;}
 
 #page #header .menu .primary-nav { 
@@ -134,9 +129,6 @@ body{
 
 #page #header .menu .primary-nav a:hover  { border-color: white; }
 #page #header .menu .primary-nav a.active { border-color: white; }
-#page.over-header-on #header .menu .primary-nav a { color: black; }
-#page.over-header-on #header .menu .primary-nav a:hover { border-color: black; }
-#page.over-header-on #header .menu .primary-nav a.active { border-color: black; }
 
 #page #header .menu .slick-nav .slick-btn {
     font-family: 'Open Sans';
@@ -151,16 +143,6 @@ body{
 
 #page #header .menu .slick-nav .slick-btn:hover {
   border-color: red;
-}
-
-#page.over-header-on #header .menu .slick-nav .slick-btn {
-    color: black; 
-    border-color: black;
-}
-
-#page.over-header-on #header .menu .slick-nav .slick-btn:hover {
-    color: white;
-    background-color: black;
 }
 
 #page #header .menu .slick-nav .slick-btn .slick-txt {
@@ -280,6 +262,31 @@ body{
 #page #slick-menu .slick-foot .socialSites .ico-twitter:hover  {color: rgb(0, 200, 255);}
 #page #slick-menu .slick-foot .socialSites .ico-facebook:hover {color: rgb(0, 100, 255);}
 
+#page #sub_header {
+    width: 100%;
+    height: 400px;
+    background: url('../design/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#page #sub_header .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#page #sub_header .wrapper .content {
+    color: white;
+    text-align: center;
+}
+
+#page #sub_header .wrapper .content .main_title {
+    margin-bottom: 0.5em;
+}
+
 /*********************************************/
 /*          CONTENT                         */
 
@@ -296,7 +303,7 @@ body{
     width: 80%;
     display: flex;
     flex-direction: column;
-    color: white
+    color: black;
 }
 
 #page #mainContent .mainWrap .mainBorder{
@@ -308,7 +315,6 @@ body{
 }
 
 #page #mainContent .mainWrap .mainTitle{
-    color: white;
     margin-top: 1em;
     text-align: center;
 }
@@ -316,7 +322,6 @@ body{
 #page #mainContent .mainWrap .intro, p{
     padding-top: 0.5em;
     padding-bottom: 1em;
-    color: white;
     font-family: 'Open Sans Light';
 }
 
@@ -325,8 +330,8 @@ body{
     margin-bottom: 2em;
     padding: 1em;
     text-decoration: none;
+    color: black;
     border: 1px solid white;
-    color: white;
     transition: all 0.5s;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -509,6 +514,10 @@ body{
 
     #page #header .logo a .title {
         font-size: 1.1em;
+    }
+
+     #page #header .menu .slick-nav .slick-btn .slick-txt {
+        font-size: 0.8em;
     }
 }
 
