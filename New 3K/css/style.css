@@ -131,7 +131,7 @@ body{
 #page #header .menu .slick-nav .slick-btn {
     font-family: 'Open Sans';
     color: white;
-    padding: 0.4em;
+    padding: 0.3em;
     transition: all 0.5s;
     border: 1px solid white;
     cursor: pointer;
@@ -276,7 +276,7 @@ body{
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #page #sub_header .wrapper .content {

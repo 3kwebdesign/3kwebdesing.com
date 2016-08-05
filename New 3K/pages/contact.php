@@ -1,65 +1,6 @@
 <?php
-mb_internal_encoding("UTF-8");
-
-$services = ['Kontakt', 'Statický web', 'Dynamický web', 'E-shop'];
-
-$output = '';
-$send = false;
-
-$name = '';
-$email = '';
-$telefon = '';
-$message = '';
 $selected = isset($_GET['service']) ? $_GET['service'] : 0;
 
-if(isset($_POST['kontakt']))
-{
-	$name = isset($_POST['name']) 		 ? htmlspecialchars($_POST['name']) : '';
-	$email = isset($_POST['email']) 	 ? htmlspecialchars($_POST['email']) : '';
-	$telefon = isset($_POST['telefon'])  ? htmlspecialchars($_POST['telefon']) : '';
-	$message = isset($_POST['message'])  ? htmlspecialchars($_POST['message']) : '';
-	$selected = isset($_POST['service']) ? (int)$_POST['service'] : 0;
-
-	if($name && $email && $message)
-	{
-		$text = $name + $telefon;
-		$text .= $message;
-
-		$send = sendMail("my@3kwebdesign.com", $name.' - '.$services[$selected],
-		 				 $email, $text);
-
-		if($send)
-		{
-			$output = 'E-mail byl úspěšně odeslán';
-
-			$name = '';
-			$email = '';
-			$telefon = '';
-			$message = '';
-			$selected = 0;
-		}
-		else
-		{
-			$output = 'E-mail se nepodařilo odeslat';
-		}
-	}
-	else
-	{
-		$output = 'Formulář není správně vyplněn';
-	}
-}
-
-if($output)
-{
-	if($send)
-	{
-		sweetAlert($output, 'Brzy vám odpovíme', 'success');
-	}
-	else
-	{
-		sweetAlert('Chyba!', $output, 'error');
-	}
-}
 ?>
 <hr class="mainBorder" />
 <h1 class="mainTitle">Kontaktujte nás!</h1>
@@ -83,30 +24,30 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus dui diam, e
 	</div>
 </div>
 
-<form id="kontakt-form" method="POST">
+<form id="kontakt-form" method="POST" action="./scripts/submitContact.php">
 	<div class="col-flex">
 	<div class="col">
 		<div class="row">
-			<label for="name">Jméno</label>
-			<input type="text" name="name" value="<?= $name ?>" />
+			<label for="f_name">Jméno</label>
+			<input id="f_name" type="text" name="name" value="" />
 		</div>
 
 		<div class="row">
-			<label for="email">E-mail</label>
-			<input type="email" name="email" value="<?= $email ?>" />
+			<label for="f_email">E-mail</label>
+			<input id="f_email" type="email" name="email" value="" />
 		</div>
 
 		<div class="row">
 			<label for="telefon">Telefon</label>
-			<input type="text" name="telefon" value="<?= $telefon ?>" />
+			<input id="f_telefon" type="text" name="telefon" value="" />
 		</div>
 	</div>
 
 	<div class="col">
 		<div class="row">
-			<label for="service">Služba</label>
+			<label for="f_service">Služba</label>
 
-			<select id="service" name="service">
+			<select id="f_service" name="service">
 				<option value="0" <?php if($selected == 0) echo('selected'); ?>>
 					Kontakt
 				</option>
@@ -126,11 +67,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus dui diam, e
 		</div>
 
 		<div class="row msg">
-			<textarea name="message" placeholder="Vaše zpráva"><?= $message ?></textarea>
+			<textarea id="f_message" name="message" placeholder="Vaše zpráva"></textarea>
 		</div>
 	</div>
 	</div>
 
-	<input type="submit" name="kontakt" value="Odeslat" class="contactButton" />
+	<input id="f_send" type="submit" value="Odeslat" class="contactButton" />
 </form>
 <hr class="mainBorder" />
